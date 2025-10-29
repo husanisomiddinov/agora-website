@@ -70,6 +70,11 @@ export default function Footer() {
             <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide">Resources</h4>
             <ul className="space-y-3 text-sm">
               <li>
+                <Link href="/resources" className="text-gray-400 hover:text-white transition-colors">
+                  Free Resources
+                </Link>
+              </li>
+              <li>
                 <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
                   Blog
                 </Link>

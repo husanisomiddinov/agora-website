@@ -47,6 +47,12 @@ export default function Header() {
               Programs
             </Link>
             <Link
+              href="/resources"
+              className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
+            >
+              Resources
+            </Link>
+            <Link
               href="/blog"
               className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
             >
@@ -119,6 +125,13 @@ export default function Header() {
                   onClick={() => setIsOpen(false)}
                 >
                   Programs
+                </Link>
+                <Link
+                  href="/resources"
+                  className="block text-text-secondary hover:text-text-primary py-2 text-sm"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Resources
                 </Link>
                 <Link
                   href="/blog"

@@ -15,15 +15,16 @@ export default {
           200: '#fecaca',
           300: '#fca5a5',
           400: '#f87171',
-          500: '#991B1E',  // Primary brand color
-          600: '#7A1619',
-          700: '#651215',
-          800: '#4a0e10',
-          900: '#3d0b0d',
+          500: '#8b1f1f',  // Primary brand color
+          600: '#6f1919',
+          700: '#5a1414',
+          800: '#450f0f',
+          900: '#360c0c',
         },
-        cream: {
-          DEFAULT: '#FAF7F2',
-          light: '#F5F1E8',
+        neutral: {
+          DEFAULT: '#F9FAFB',
+          light: '#FFFFFF',
+          dark: '#F3F4F6',
         },
         text: {
           primary: '#1A1A1A',

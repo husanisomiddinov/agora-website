@@ -11,8 +11,13 @@ export default function Header() {
     <header className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200">
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-serif font-bold text-text-primary hover:text-crimson-500 transition-colors">
-            Project Agora
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img
+              src="/picture/a6.jpg"
+              alt="Project Agora Logo"
+              className="h-10 w-auto"
+            />
+            <span className="text-2xl font-serif text-text-primary">Agora</span>
           </Link>
 
           {/* Desktop Navigation */}

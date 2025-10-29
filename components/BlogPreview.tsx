@@ -32,31 +32,31 @@ const featuredPosts = [
 
 export default function BlogPreview() {
   return (
-    <section className="py-32 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-6 bg-white">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex justify-between items-end mb-16"
+          className="flex justify-between items-end mb-12"
         >
           <div>
-            <h2 className="text-5xl md:text-6xl font-serif text-text-primary mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-4 leading-tight">
               Latest insights
             </h2>
-            <p className="text-xl text-text-secondary max-w-2xl leading-relaxed">
+            <p className="text-base text-text-secondary max-w-2xl leading-relaxed">
               Thoughts on education, AI, and the future of learning.
             </p>
           </div>
           <Link
             href="/blog"
-            className="hidden md:block px-6 py-3 border-2 border-crimson-500 text-crimson-500 rounded-xl hover:bg-crimson-50 transition-all text-base font-medium"
+            className="hidden md:block px-6 py-3 border-2 border-crimson-500 text-crimson-500 rounded-lg hover:bg-crimson-50 transition-all text-sm font-medium"
           >
             View All Posts →
           </Link>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {featuredPosts.map((post, index) => (
             <motion.article
               key={post.slug}
@@ -66,7 +66,7 @@ export default function BlogPreview() {
               transition={{ delay: index * 0.1 }}
             >
               <Link href={`/blog/${post.slug}`} className="group block">
-                <div className="p-8 rounded-2xl bg-cream border border-gray-200 hover:shadow-lg transition-all h-full flex flex-col">
+                <div className="p-6 rounded-lg bg-gray-50 border border-gray-200 hover:shadow-lg transition-all h-full flex flex-col">
                   <div className="flex items-center gap-2 mb-4">
                     {post.tags && post.tags.slice(0, 2).map((tag, idx) => (
                       <span key={idx} className="px-3 py-1 rounded-full bg-crimson-500/10 text-crimson-600 text-xs font-medium">
@@ -75,11 +75,11 @@ export default function BlogPreview() {
                     ))}
                   </div>
 
-                  <h3 className="text-2xl font-serif text-text-primary mb-3 group-hover:text-crimson-500 transition-colors line-clamp-2">
+                  <h3 className="text-xl font-serif text-text-primary mb-3 group-hover:text-crimson-500 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
 
-                  <p className="text-base text-text-secondary mb-4 leading-relaxed line-clamp-3 flex-1">
+                  <p className="text-sm text-text-secondary mb-4 leading-relaxed line-clamp-3 flex-1">
                     {post.excerpt}
                   </p>
 
@@ -101,7 +101,7 @@ export default function BlogPreview() {
         >
           <Link
             href="/blog"
-            className="inline-block px-8 py-4 bg-crimson-500 text-white rounded-xl hover:bg-crimson-600 transition-all text-base font-medium shadow-lg shadow-crimson-500/20"
+            className="inline-block px-6 py-3 bg-crimson-500 text-white rounded-lg hover:bg-crimson-600 transition-all text-sm font-medium shadow-lg shadow-crimson-500/20"
           >
             View All Posts →
           </Link>

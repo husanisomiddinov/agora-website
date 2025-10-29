@@ -32,27 +32,27 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <article className="min-h-screen py-20 px-6">
+    <article className="min-h-screen py-20 px-6 bg-cream">
       <div className="max-w-3xl mx-auto">
         <header className="mb-12">
-          <h1 className="text-display font-serif mb-4">{post.title}</h1>
-          <p className="text-body text-text-tertiary">
+          <h1 className="text-3xl md:text-4xl font-serif text-text-primary mb-4 leading-tight">{post.title}</h1>
+          <p className="text-sm text-text-tertiary">
             {post.date} • By {post.author}
           </p>
         </header>
 
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none bg-white p-8 rounded-xl border border-cream-dark">
           <MDXRemote source={post.content} />
         </div>
 
         {post.tags && post.tags.length > 0 && (
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <p className="text-small text-text-tertiary mb-3">Tags:</p>
+          <div className="mt-8 pt-6 border-t border-cream-dark">
+            <p className="text-xs text-text-tertiary mb-3">Tags:</p>
             <div className="flex gap-2">
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 bg-crimson-50 text-crimson-500 rounded-full text-small"
+                  className="px-3 py-1 bg-crimson-500/10 text-crimson-600 rounded-full text-xs font-medium"
                 >
                   {tag}
                 </span>

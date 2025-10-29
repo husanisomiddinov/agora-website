@@ -66,7 +66,7 @@ export default function BlogPreview() {
               transition={{ delay: index * 0.1 }}
             >
               <Link href={`/blog/${post.slug}`} className="group block">
-                <div className="p-6 rounded-lg bg-gray-50 border border-gray-200 hover:shadow-lg transition-all h-full flex flex-col">
+                <div className="p-6 rounded-lg bg-cream border border-cream-dark hover:shadow-lg transition-all h-full flex flex-col">
                   <div className="flex items-center gap-2 mb-4">
                     {post.tags && post.tags.slice(0, 2).map((tag, idx) => (
                       <span key={idx} className="px-3 py-1 rounded-full bg-crimson-500/10 text-crimson-600 text-xs font-medium">
@@ -83,7 +83,7 @@ export default function BlogPreview() {
                     {post.excerpt}
                   </p>
 
-                  <div className="flex items-center justify-between text-sm text-text-secondary pt-4 border-t border-gray-200">
+                  <div className="flex items-center justify-between text-sm text-text-secondary pt-4 border-t border-cream-dark">
                     <span>{post.author}</span>
                     <span>{post.date}</span>
                   </div>

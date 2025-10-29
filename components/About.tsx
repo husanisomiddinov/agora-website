@@ -27,7 +27,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-6 rounded-xl bg-gray-50 border border-gray-200 hover:shadow-lg transition-shadow"
+            className="p-6 rounded-xl bg-cream border border-cream-dark hover:shadow-lg transition-shadow"
           >
             <div className="w-10 h-10 rounded-lg bg-crimson-500/10 flex items-center justify-center mb-4">
               <svg className="w-5 h-5 text-crimson-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-6 rounded-xl bg-gray-50 border border-gray-200 hover:shadow-lg transition-shadow"
+            className="p-6 rounded-xl bg-cream border border-cream-dark hover:shadow-lg transition-shadow"
           >
             <div className="w-10 h-10 rounded-lg bg-crimson-500/10 flex items-center justify-center mb-4">
               <svg className="w-5 h-5 text-crimson-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="p-6 rounded-xl bg-gray-50 border border-gray-200 hover:shadow-lg transition-shadow"
+            className="p-6 rounded-xl bg-cream border border-cream-dark hover:shadow-lg transition-shadow"
           >
             <div className="w-10 h-10 rounded-lg bg-crimson-500/10 flex items-center justify-center mb-4">
               <svg className="w-5 h-5 text-crimson-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

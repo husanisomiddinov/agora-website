@@ -8,7 +8,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200">
+    <header className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-cream-dark">
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
@@ -91,7 +91,7 @@ export default function Header() {
               transition={{ duration: 0.2 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="pt-4 pb-2 space-y-3 border-t border-gray-200 mt-4">
+              <div className="pt-4 pb-2 space-y-3 border-t border-cream-dark mt-4">
                 <Link
                   href="/#about"
                   className="block text-text-secondary hover:text-text-primary py-2 text-sm"

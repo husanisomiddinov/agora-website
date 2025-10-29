@@ -21,7 +21,7 @@ const programs = [
 
 export default function Programs() {
   return (
-    <section id="programs" className="py-20 px-6 bg-gray-50">
+    <section id="programs" className="py-20 px-6 bg-cream">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ export default function Programs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-6 rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all group"
+              className="p-6 rounded-xl bg-white border border-cream-dark hover:shadow-xl transition-all group"
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className="px-2 py-0.5 rounded-full bg-crimson-500/10 text-crimson-600 text-xs font-medium">
@@ -85,7 +85,7 @@ export default function Programs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 text-center p-8 rounded-xl bg-white border border-gray-200"
+          className="mt-12 text-center p-8 rounded-xl bg-white border border-cream-dark"
         >
           <h3 className="text-xl font-serif text-text-primary mb-3">
             Not sure which program is right for you?

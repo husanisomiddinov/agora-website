@@ -31,23 +31,23 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-32 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="features" className="py-20 px-6 bg-white">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 max-w-3xl"
+          className="mb-12 max-w-2xl"
         >
-          <h2 className="text-5xl md:text-6xl font-serif text-text-primary mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-4 leading-tight">
             Education designed for how you learn
           </h2>
-          <p className="text-xl text-text-secondary leading-relaxed">
+          <p className="text-base text-text-secondary leading-relaxed">
             Every aspect of Project Agora is built to adapt to your unique learning style, pace, and goals.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -57,10 +57,10 @@ export default function Features() {
               transition={{ delay: index * 0.1 }}
               className="group"
             >
-              <h3 className="text-2xl font-serif text-text-primary mb-4 group-hover:text-crimson-500 transition-colors">
+              <h3 className="text-lg font-serif text-text-primary mb-3 group-hover:text-crimson-500 transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-lg text-text-secondary leading-relaxed">
+              <p className="text-sm text-text-secondary leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

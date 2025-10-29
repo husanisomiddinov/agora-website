@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function CTA() {
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-cream">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export default function CTA() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-white text-crimson-500 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium shadow-xl"
+                className="px-6 py-3 bg-white text-crimson-500 rounded-lg hover:bg-cream-light transition-colors text-sm font-medium shadow-xl"
               >
                 Get Started Free
               </motion.button>

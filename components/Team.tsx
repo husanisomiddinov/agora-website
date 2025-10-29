@@ -27,7 +27,7 @@ const team = [
 
 export default function Team() {
   return (
-    <section id="team" className="py-20 px-6 bg-gray-50">
+    <section id="team" className="py-20 px-6 bg-cream">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export default function Team() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-6 rounded-lg bg-white border border-gray-200 hover:shadow-lg transition-shadow group"
+              className="p-6 rounded-lg bg-white border border-cream-dark hover:shadow-lg transition-shadow group"
             >
               <div className="flex gap-6">
                 <div className="w-16 h-16 rounded-full bg-crimson-500/10 flex-shrink-0 flex items-center justify-center">

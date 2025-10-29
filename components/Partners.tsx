@@ -37,7 +37,7 @@ export default function Partners() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-6 rounded-lg border-2 border-gray-200 hover:border-crimson-500 transition-all hover:shadow-lg group"
+              className="p-6 rounded-lg border-2 border-cream-dark hover:border-crimson-500 transition-all hover:shadow-lg group"
             >
               <h3 className="text-lg font-serif text-text-primary mb-2 group-hover:text-crimson-500 transition-colors">
                 {partner.name}

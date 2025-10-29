@@ -21,6 +21,11 @@ export default {
           800: '#450f0f',
           900: '#360c0c',
         },
+        cream: {
+          DEFAULT: '#FAFAF8',  // Slightly warm white for backgrounds
+          light: '#FEFEFD',    // Very light warm white
+          dark: '#F5F5F2',     // Slightly darker warm white
+        },
         neutral: {
           DEFAULT: '#F9FAFB',
           light: '#FFFFFF',

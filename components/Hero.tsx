@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden bg-gray-50">
+    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden bg-cream">
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-crimson-500/5 via-transparent to-pink-500/5"></div>
 
@@ -50,15 +50,15 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
         >
-          <div className="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="p-6 rounded-xl bg-white border border-cream-dark shadow-sm hover:shadow-md transition-shadow">
             <div className="text-3xl font-serif font-bold text-crimson-500 mb-1">10K+</div>
             <div className="text-sm text-text-secondary">Active learners worldwide</div>
           </div>
-          <div className="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="p-6 rounded-xl bg-white border border-cream-dark shadow-sm hover:shadow-md transition-shadow">
             <div className="text-3xl font-serif font-bold text-crimson-500 mb-1">95%</div>
             <div className="text-sm text-text-secondary">Student success rate</div>
           </div>
-          <div className="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="p-6 rounded-xl bg-white border border-cream-dark shadow-sm hover:shadow-md transition-shadow">
             <div className="text-3xl font-serif font-bold text-crimson-500 mb-1">50+</div>
             <div className="text-sm text-text-secondary">Expert-designed programs</div>
           </div>

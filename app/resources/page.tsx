@@ -40,12 +40,8 @@ export default function ResourcesPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="mb-16"
+          className="mb-12"
         >
-          <h2 className="text-2xl font-serif text-text-primary mb-6 leading-tight">
-            Books
-          </h2>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {books.map((book, index) => (
               <motion.div
@@ -101,47 +97,31 @@ export default function ResourcesPage() {
           </div>
         </motion.div>
 
-        {/* Coming Soon Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="grid md:grid-cols-3 gap-6"
-        >
-          {[
-            { title: "Expert Advice", icon: "💡", description: "Coming soon" },
-            { title: "Podcasts", icon: "🎙️", description: "Coming soon" },
-            { title: "Free Lessons", icon: "📚", description: "Coming soon" }
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="p-6 bg-white border border-cream-dark rounded-xl text-center"
-            >
-              <div className="text-4xl mb-3">{item.icon}</div>
-              <h3 className="text-lg font-serif text-text-primary mb-2">
-                {item.title}
-              </h3>
-              <p className="text-sm text-text-secondary">{item.description}</p>
-            </div>
-          ))}
-        </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="mt-16 text-center p-8 bg-white border border-cream-dark rounded-xl"
+          transition={{ delay: 0.3 }}
+          className="text-center p-8 rounded-xl bg-gradient-to-br from-crimson-500 to-crimson-600 text-white relative overflow-hidden"
         >
-          <h3 className="text-xl font-serif text-text-primary mb-3">
-            Want to stay updated?
-          </h3>
-          <p className="text-sm text-text-secondary mb-6 max-w-xl mx-auto">
-            Subscribe to our newsletter to get notified when we release new resources, books, and learning materials.
-          </p>
-          <button className="px-6 py-2.5 bg-crimson-500 text-white rounded-lg hover:bg-crimson-600 transition-all text-sm font-medium shadow-lg shadow-crimson-500/20">
-            Subscribe Now →
-          </button>
+          {/* Background pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:72px_72px] opacity-30"></div>
+
+          <div className="relative">
+            <h3 className="text-xl md:text-2xl font-serif mb-3">
+              Want to stay updated?
+            </h3>
+            <p className="text-sm mb-6 max-w-xl mx-auto opacity-90">
+              Subscribe to our newsletter to get notified when we release new resources, books, and learning materials.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-2.5 bg-white text-crimson-500 rounded-lg hover:bg-cream-light transition-all text-sm font-medium shadow-xl"
+            >
+              Subscribe Now →
+            </motion.button>
+          </div>
         </motion.div>
       </div>
     </div>

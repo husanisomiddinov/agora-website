@@ -2,75 +2,66 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-cream-dark">
-      <nav className="max-w-7xl mx-auto px-6 py-4">
+    <header className="sticky top-0 z-50 bg-cream border-b border-gray-300">
+      <nav className="max-w-6xl mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 hover:opacity-70 transition-opacity">
             <img
               src="/picture/a6.jpg"
               alt="Project Agora Logo"
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
             <span className="text-2xl font-serif text-text-primary">Agora</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             <Link
               href="/#about"
-              className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
+              className="text-sm text-text-secondary hover:text-crimson-500 transition-colors"
             >
               About
             </Link>
             <Link
-              href="/#team"
-              className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
-            >
-              Team
-            </Link>
-            <Link
-              href="/#partners"
-              className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
-            >
-              Partners
-            </Link>
-            <Link
               href="/#programs"
-              className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
+              className="text-sm text-text-secondary hover:text-crimson-500 transition-colors"
             >
               Programs
             </Link>
             <Link
               href="/resources"
-              className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
+              className="text-sm text-text-secondary hover:text-crimson-500 transition-colors"
             >
               Resources
             </Link>
             <Link
               href="/blog"
-              className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
+              className="text-sm text-text-secondary hover:text-crimson-500 transition-colors"
             >
               Blog
             </Link>
-            <button className="px-6 py-2.5 bg-crimson-500 text-white rounded-lg hover:bg-crimson-600 transition-all text-sm font-medium shadow-lg shadow-crimson-500/20">
-              Apply Now
-            </button>
+            <Link
+              href="/#team"
+              className="text-sm text-text-secondary hover:text-crimson-500 transition-colors"
+            >
+              Team
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 -mr-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 text-text-primary"
+              className="w-5 h-5 text-text-primary"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -88,65 +79,45 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.2 }}
-              className="md:hidden overflow-hidden"
+        {isOpen && (
+          <div className="md:hidden pt-4 pb-2 space-y-1 border-t border-gray-300 mt-4">
+            <Link
+              href="/#about"
+              className="block text-sm text-text-secondary hover:text-crimson-500 py-2"
+              onClick={() => setIsOpen(false)}
             >
-              <div className="pt-4 pb-2 space-y-3 border-t border-cream-dark mt-4">
-                <Link
-                  href="/#about"
-                  className="block text-text-secondary hover:text-text-primary py-2 text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/#team"
-                  className="block text-text-secondary hover:text-text-primary py-2 text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Team
-                </Link>
-                <Link
-                  href="/#partners"
-                  className="block text-text-secondary hover:text-text-primary py-2 text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Partners
-                </Link>
-                <Link
-                  href="/#programs"
-                  className="block text-text-secondary hover:text-text-primary py-2 text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Programs
-                </Link>
-                <Link
-                  href="/resources"
-                  className="block text-text-secondary hover:text-text-primary py-2 text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Resources
-                </Link>
-                <Link
-                  href="/blog"
-                  className="block text-text-secondary hover:text-text-primary py-2 text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Blog
-                </Link>
-                <button className="w-full px-6 py-2.5 bg-crimson-500 text-white rounded-lg hover:bg-crimson-600 transition-all text-sm font-medium mt-2 shadow-lg shadow-crimson-500/20">
-                  Apply Now
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              About
+            </Link>
+            <Link
+              href="/#programs"
+              className="block text-sm text-text-secondary hover:text-crimson-500 py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Programs
+            </Link>
+            <Link
+              href="/resources"
+              className="block text-sm text-text-secondary hover:text-crimson-500 py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Resources
+            </Link>
+            <Link
+              href="/blog"
+              className="block text-sm text-text-secondary hover:text-crimson-500 py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/#team"
+              className="block text-sm text-text-secondary hover:text-crimson-500 py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Team
+            </Link>
+          </div>
+        )}
       </nav>
     </header>
   )

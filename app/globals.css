@@ -11,11 +11,26 @@
   }
 
   body {
-    @apply bg-white text-text-primary;
+    @apply bg-cream text-text-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-150;
+  }
+
+  a:hover {
+    @apply text-crimson-500;
   }
 }
 
@@ -28,7 +43,7 @@
 /* Custom scrollbar styling for webkit browsers */
 @layer base {
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -36,10 +51,10 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-text-secondary rounded-full;
+    @apply bg-text-tertiary;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-text-primary;
+    @apply bg-text-secondary;
   }
 }

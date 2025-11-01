@@ -1,7 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
-
 const programs = [
   {
     title: "Agora Regular",
@@ -21,82 +17,71 @@ const programs = [
 
 export default function Programs() {
   return (
-    <section id="programs" className="py-20 px-6 bg-cream">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-4 leading-tight">
+    <section id="programs" className="py-24 px-6 bg-cream border-b border-gray-300">
+      <div className="max-w-4xl mx-auto">
+        {/* Section Header */}
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif text-text-primary mb-6 leading-tight">
             Programs we offer
           </h2>
-          <p className="text-base text-text-secondary max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             Expertly designed programs that adapt to your learning pace and goals, with hands-on projects and real-world applications.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        {/* Programs List */}
+        <div className="space-y-12">
           {programs.map((program, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="p-6 rounded-xl bg-white border border-cream-dark hover:shadow-xl transition-all group"
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <span className="px-2 py-0.5 rounded-full bg-crimson-500/10 text-crimson-600 text-xs font-medium">
-                  {program.level}
+            <article key={index} className="border-b border-gray-300 pb-12 last:border-0">
+              <div className="flex items-baseline gap-3 mb-4">
+                <h3 className="text-2xl font-serif text-text-primary">
+                  {program.title}
+                </h3>
+                <span className="text-sm text-text-tertiary">
+                  {program.duration} · {program.level}
                 </span>
-                <span className="text-xs text-text-secondary">{program.duration}</span>
               </div>
 
-              <h3 className="text-xl font-serif text-text-primary mb-3 group-hover:text-crimson-500 transition-colors">
-                {program.title}
-              </h3>
-
-              <p className="text-sm text-text-secondary mb-4 leading-relaxed">
+              <p className="text-base text-text-secondary mb-6 leading-relaxed">
                 {program.description}
               </p>
 
-              <div className="space-y-1.5 mb-6">
-                <p className="text-xs font-medium text-text-primary mb-2">What you'll learn:</p>
-                {program.highlights.map((highlight, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-crimson-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-xs text-text-secondary">{highlight}</span>
-                  </div>
-                ))}
+              <div className="mb-6">
+                <p className="text-sm font-medium text-text-primary mb-3">Includes:</p>
+                <ul className="space-y-2">
+                  {program.highlights.map((highlight, idx) => (
+                    <li key={idx} className="text-sm text-text-secondary pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-crimson-500">
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <button className="w-full px-4 py-2 bg-crimson-500 text-white rounded-lg hover:bg-crimson-600 transition-all text-xs font-medium shadow-lg shadow-crimson-500/20">
-                Learn More →
-              </button>
-            </motion.div>
+              <a
+                href="#"
+                className="inline-block text-sm text-text-primary underline underline-offset-4 hover:text-crimson-500 transition-colors"
+              >
+                Learn more about {program.title} →
+              </a>
+            </article>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center p-8 rounded-xl bg-white border border-cream-dark"
-        >
-          <h3 className="text-xl font-serif text-text-primary mb-3">
+        {/* CTA Section */}
+        <div className="mt-16 pt-12 border-t border-gray-300">
+          <h3 className="text-xl font-serif text-text-primary mb-4">
             Not sure which program is right for you?
           </h3>
-          <p className="text-sm text-text-secondary mb-6 max-w-xl mx-auto">
+          <p className="text-base text-text-secondary mb-6 max-w-xl">
             Take our free assessment to get personalized program recommendations based on your goals and experience.
           </p>
-          <button className="px-6 py-2.5 border-2 border-crimson-500 text-crimson-500 rounded-lg hover:bg-crimson-50 transition-all text-sm font-medium">
+          <a
+            href="#"
+            className="inline-block text-sm text-text-primary underline underline-offset-4 hover:text-crimson-500 transition-colors"
+          >
             Take Assessment →
-          </button>
-        </motion.div>
+          </a>
+        </div>
       </div>
     </section>
   )

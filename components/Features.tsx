@@ -1,7 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
-
 const features = [
   {
     title: "Adaptive Learning Paths",
@@ -31,39 +27,29 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12 max-w-2xl"
-        >
-          <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-4 leading-tight">
+    <section id="features" className="py-24 px-6 bg-cream border-b border-gray-300">
+      <div className="max-w-4xl mx-auto">
+        {/* Section Header */}
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif text-text-primary mb-6 leading-tight">
             Education designed for how you learn
           </h2>
-          <p className="text-base text-text-secondary leading-relaxed">
+          <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
             Every aspect of Project Agora is built to adapt to your unique learning style, pace, and goals.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Features List */}
+        <div className="space-y-10">
           {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group"
-            >
-              <h3 className="text-lg font-serif text-text-primary mb-3 group-hover:text-crimson-500 transition-colors">
+            <div key={index} className="border-b border-gray-300 pb-10 last:border-0">
+              <h3 className="text-xl font-serif text-text-primary mb-3">
                 {feature.title}
               </h3>
-              <p className="text-sm text-text-secondary leading-relaxed">
+              <p className="text-base text-text-secondary leading-relaxed">
                 {feature.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

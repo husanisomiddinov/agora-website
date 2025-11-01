@@ -1,7 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
-
 const partners = [
   { name: "Stanford University", type: "Academic Partner" },
   { name: "MIT Media Lab", type: "Research Partner" },
@@ -13,53 +9,42 @@ const partners = [
 
 export default function Partners() {
   return (
-    <section id="partners" className="py-20 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-6 leading-tight">
+    <section id="partners" className="py-24 px-6 bg-cream border-b border-gray-300">
+      <div className="max-w-4xl mx-auto">
+        {/* Section Header */}
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif text-text-primary mb-6 leading-tight">
             Our partners
           </h2>
-          <p className="text-base text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             We collaborate with leading institutions and organizations to deliver world-class educational experiences.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Partners Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-16">
           {partners.map((partner, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="p-6 rounded-lg border-2 border-cream-dark hover:border-crimson-500 transition-all hover:shadow-lg group"
-            >
-              <h3 className="text-lg font-serif text-text-primary mb-2 group-hover:text-crimson-500 transition-colors">
+            <div key={index} className="border-l-2 border-gray-300 pl-6 hover:border-crimson-500 transition-colors">
+              <h3 className="text-lg font-serif text-text-primary mb-1">
                 {partner.name}
               </h3>
-              <p className="text-sm text-text-secondary">{partner.type}</p>
-            </motion.div>
+              <p className="text-sm text-text-tertiary">{partner.type}</p>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <p className="text-sm text-text-secondary mb-6">
+        {/* CTA */}
+        <div className="pt-12 border-t border-gray-300">
+          <p className="text-base text-text-secondary mb-4">
             Interested in partnering with us?
           </p>
-          <button className="px-6 py-3 border-2 border-crimson-500 text-crimson-500 rounded-lg hover:bg-crimson-50 transition-all text-sm font-medium">
+          <a
+            href="#"
+            className="inline-block text-sm text-text-primary underline underline-offset-4 hover:text-crimson-500 transition-colors"
+          >
             Become a Partner →
-          </button>
-        </motion.div>
+          </a>
+        </div>
       </div>
     </section>
   )
